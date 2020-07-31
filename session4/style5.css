@@ -1,0 +1,9 @@
+#container .rect {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  background-color: orangered;
+  -webkit-transform: translateX(50px) scaleY(2);
+          transform: translateX(50px) scaleY(2);
+}
+/*# sourceMappingURL=style5.css.map */
