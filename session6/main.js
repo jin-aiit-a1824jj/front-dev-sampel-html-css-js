@@ -42,7 +42,7 @@ console.log(hello.length);
 console.log(hello.toLocaleUpperCase());
 console.log(hello.slice(0,5));
 console.log(hello.split(' '));
-*/
+
 
 const arry = new Array(1,2,3,4,5,6, 'moji', false);
 console.log(arry);
@@ -66,4 +66,25 @@ console.log(arry);
 const val = arry.shift();
 console.log(val);
 console.log(arry);
+*/
 
+const person = {
+    name: ['Code', 'Mafia'],
+    age: 32,
+    gender: 'male',
+    interests: {
+        sports: 'soccer',
+        music: 'piano'
+    },
+    getFullName: function(){
+        console.log(this.name[0] + this.name[1]);
+    }
+};
+
+console.log(person.name);
+console.log(person.interests);
+
+const ageKey = 'age';
+person[ageKey] = 12;
+console.log(person.age);
+person.getFullName();
