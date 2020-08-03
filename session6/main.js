@@ -20,7 +20,7 @@ console.log(typeof variable);
 //静的型付け言語
 //int num = 12;
 
-*/
+
 function hello(name, age) {
     console.log('hello' + name + age);
     return name + age;
@@ -35,3 +35,10 @@ const h = function (name, age) {
     return name + age;
 }
 h('code Mafia3', 30);
+*/
+
+let hello = 'hello world';
+console.log(hello.length);
+console.log(hello.toLocaleUpperCase());
+console.log(hello.slice(0,5));
+console.log(hello.split(' '));
