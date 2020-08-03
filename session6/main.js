@@ -47,17 +47,22 @@ console.log(hello.split(' '));
 const arry = new Array(1,2,3,4,5,6, 'moji', false);
 console.log(arry);
 console.log(arry[3]);
+
 arry[5] = 8;
 console.log(arry[5]);
 console.log(arry.length);
+
 arry.push('new item');
 console.log(arry.length);
 console.log(arry);
+
 const p = arry.pop();
 console.log(p);
 console.log(arry);
+
 arry.unshift('add first item');
 console.log(arry);
+
 const val = arry.shift();
 console.log(val);
 console.log(arry);
