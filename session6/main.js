@@ -288,7 +288,7 @@ function plus(a, b){
 
 doSomething(3, 4, multiply);
 doSomething(3, 4, plus);
-*/
+
 
 
 const arry = [1,2,3,4,5];
@@ -314,3 +314,19 @@ forEach(arry, function(val){
     val = val * 2;
     log(val);
 });
+*/
+
+const arry = [1,2,3,4,5];
+
+// arry.forEach(function(val, index, ary){
+//     console.log(val, index, ary);
+// });
+
+arry.forEach((val, index, ary)=>{
+    console.log(val, index, ary);
+});
+
+for(let i = 0; i < arry.length; i++){
+    const v= arry[i];
+    console.log(v);
+}
