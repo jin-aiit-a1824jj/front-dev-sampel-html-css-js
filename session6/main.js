@@ -314,7 +314,7 @@ forEach(arry, function(val){
     val = val * 2;
     log(val);
 });
-*/
+
 
 const arry = [1,2,3,4,5];
 
@@ -330,3 +330,23 @@ for(let i = 0; i < arry.length; i++){
     const v= arry[i];
     console.log(v);
 }
+*/
+
+const arry = [1,2,3,4,5];
+
+arry.reduce(function(accu, curr){
+    console.log(accu, curr);
+    //return accu + curr;
+}, 10);
+
+const str = 'animation';
+const strArray = str.split('');
+
+console.log(strArray);
+
+const result = strArray.reduce((accu, curr)=>{
+    //console.log(accu);
+    //return accu + '<' + curr + '>';
+    return `${accu}<${curr}>`;
+}, "");
+console.log(result);
