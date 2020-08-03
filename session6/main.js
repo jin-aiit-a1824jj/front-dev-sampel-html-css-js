@@ -104,7 +104,7 @@ for (let i in arry){
 for (let v of arry){
     console.log(v, arry[v]);
 }
-*/
+
 
 const todos = [
     {
@@ -144,4 +144,85 @@ for(let todo of todos){
     if(todo.completed === true){
         console.log(todo, todo.title);
     }
+}
+*/
+
+if(true) {
+    console.log('this is true');
+} else if(true) {
+    console.log('this is in else if true');
+} else {
+    console.log('this is false');
+}
+
+let num = Number(false);
+console.log(num);
+
+if (1 == '1') {
+    console.log('this is true');
+} else {
+    console.log('this is false');
+}
+
+if (1 === '1') {
+    console.log('this is true');
+} else {
+    console.log('this is false');
+}
+
+if (0 == '0') {
+    console.log('this is true');
+} else {
+    console.log('this is false');
+}
+
+if (0 === '0') {
+    console.log('this is true');
+} else {
+    console.log('this is false');
+}
+
+if (1 == true) {
+    console.log('this is true');
+} else {
+    console.log('this is false');
+}
+
+if (1 === true) {
+    console.log('this is true');
+} else {
+    console.log('this is false');
+}
+
+if (0 == false) {
+    console.log('this is true');
+} else {
+    console.log('this is false');
+}
+
+if (0 === false) {
+    console.log('this is true');
+} else {
+    console.log('this is false');
+}
+
+if (1 == true && 1 === true) {
+    console.log('this is true');
+} else {
+    console.log('this is false');
+}
+
+if (1 == true || 1 === true) {
+    console.log('this is true');
+} else {
+    console.log('this is false');
+}
+
+num = 0; //undefined; null;
+const bool = Boolean(num);
+console.log(bool);
+if (!num) {
+    console.log('this is true');
+} else {
+    console.log('this is false');
 }
