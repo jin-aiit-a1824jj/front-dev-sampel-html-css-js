@@ -247,7 +247,7 @@ console.log(re());
 
 const arry = [1,2,3,4,5,6];
 arry.forEach(value => console.log(value));
-*/
+
 
 function hello(callback, lastName) {
     console.log(callback);
@@ -288,3 +288,29 @@ function plus(a, b){
 
 doSomething(3, 4, multiply);
 doSomething(3, 4, plus);
+*/
+
+
+const arry = [1,2,3,4,5];
+
+function forEach(ary, callback){
+    for(let i = 0; i < arry.length; i++) {
+        callback(ary[i]);
+    }
+}
+
+function log(val) {
+    console.log(val);
+}
+
+function double(val) {
+    val = val * 2;
+    log(val);
+}
+
+//forEach(arry, double);
+
+forEach(arry, function(val){
+    val = val * 2;
+    log(val);
+});
