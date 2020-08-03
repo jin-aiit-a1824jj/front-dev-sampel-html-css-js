@@ -145,7 +145,7 @@ for(let todo of todos){
         console.log(todo, todo.title);
     }
 }
-*/
+
 
 if(true) {
     console.log('this is true');
@@ -226,3 +226,24 @@ if (!num) {
 } else {
     console.log('this is false');
 }
+*/
+
+// function hello(name = 'Tom') {
+//     console.log('hello' + name);
+// }
+
+// const hello = function (name = 'Tom') {
+//     console.log('hello' + name);
+// }
+
+const hello = (name = 'Tom') => console.log('hello' + name);
+
+hello();
+hello('Code Mafia');
+hello('Code Mafia2');
+
+const re = (name = 'Tom', age) => 40;
+console.log(re());
+
+const arry = [1,2,3,4,5,6];
+arry.forEach(value => console.log(value));
