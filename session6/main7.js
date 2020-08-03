@@ -1,14 +1,43 @@
+// const obj = {
+//     first_name: 'Mafia',
+//     last_name: 'Code',
+//     printFullName: function() {
+//         console.log('hello');
+//     }
+// }
+
+// console.log(obj.first_name);
+// obj.printFullName();
+
+
+// class MyObj {
+//     constructor(){
+//         this.first_name = 'Mafia';
+//         this.last_name = 'Code';
+//     }
+
+//     printFullName() {
+//         console.log('hello');
+//     }
+// }
+
+// const obj2 = new MyObj();
+// obj2.__proto__.printFullName();
+
 const obj = {
     first_name: 'Mafia',
     last_name: 'Code',
     printFullName: function() {
-        console.log('hello');
+        console.log(this.first_name);
+        window.setTimeout(function(){
+            console.log(this);
+        });
+        const fn = function() {
+            console.log(this);
+        }
+        window.setTimeout(fn);
     }
 }
-
-console.log(obj.first_name);
-obj.printFullName();
-
 
 class MyObj {
     constructor(){
@@ -17,9 +46,17 @@ class MyObj {
     }
 
     printFullName() {
-        console.log('hello');
+        console.log(this.first_name);
     }
 }
 
+const window = {
+    setTimeout: function(fn) {
+        fn();    
+    }
+}
+
+obj.printFullName();
+
 const obj2 = new MyObj();
-obj2.__proto__.printFullName();
+obj2.printFullName();
