@@ -24,6 +24,7 @@
 // const obj2 = new MyObj();
 // obj2.__proto__.printFullName();
 
+/*
 const obj = {
     first_name: 'Mafia',
     last_name: 'Code',
@@ -60,3 +61,28 @@ obj.printFullName();
 
 const obj2 = new MyObj();
 obj2.printFullName();
+*/
+
+const obj = {
+    first_name: 'Mafia',
+    last_name: 'Code',
+    printFullName: function() {
+        console.log(this);
+        const _that = this;
+
+        window.setTimeout(function(){
+            console.log(this);
+            console.log(_that);
+        });
+
+        window.setTimeout(function(){
+            console.log(this);
+        }.bind(this));
+
+        window.setTimeout(function(){
+            console.log(this);
+        }.bind({first_name: 'Taro'}));
+    }
+}
+
+obj.printFullName();
