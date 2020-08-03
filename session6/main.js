@@ -226,7 +226,7 @@ if (!num) {
 } else {
     console.log('this is false');
 }
-*/
+
 
 // function hello(name = 'Tom') {
 //     console.log('hello' + name);
@@ -247,3 +247,44 @@ console.log(re());
 
 const arry = [1,2,3,4,5,6];
 arry.forEach(value => console.log(value));
+*/
+
+function hello(callback, lastName) {
+    console.log(callback);
+    console.log('hello ' + callback(lastName));
+}
+
+function getName() {
+    return 'Code Mafia';
+}
+
+function getFirstName() {
+    return 'Code';
+}
+
+hello(getName);
+hello(getFirstName);
+hello(function(){
+    return 'Mafia';
+});
+hello(()=>'ArrowFuction');
+
+hello(function(name){
+    return 'Code' + name;
+}, 'Mafia');
+
+function doSomething(a, b, callback) {
+    const result = callback(a, b);
+    console.log(result);
+}
+
+function multiply(a, b){
+    return a * b;
+}
+
+function plus(a, b){
+    return a + b;
+}
+
+doSomething(3, 4, multiply);
+doSomething(3, 4, plus);
