@@ -66,7 +66,7 @@ console.log(arry);
 const val = arry.shift();
 console.log(val);
 console.log(arry);
-*/
+
 
 const person = {
     name: ['Code', 'Mafia'],
@@ -88,3 +88,19 @@ const ageKey = 'age';
 person[ageKey] = 12;
 console.log(person.age);
 person.getFullName();
+*/
+
+const arry = [1, 2, 3, 4, 5, 6];
+
+for(let i = 0; i < arry.length; ++i){
+    //console.log(i);
+    console.log(arry[i]);
+}
+
+for (let i in arry){
+    console.log(i, arry[i]);
+}
+
+for (let v of arry){
+    console.log(v, arry[v]);
+}
