@@ -330,7 +330,7 @@ for(let i = 0; i < arry.length; i++){
     const v= arry[i];
     console.log(v);
 }
-*/
+
 
 const arry = [1,2,3,4,5];
 
@@ -349,4 +349,27 @@ const result = strArray.reduce((accu, curr)=>{
     //return accu + '<' + curr + '>';
     return `${accu}<${curr}>`;
 }, "");
+console.log(result);
+*/
+
+
+const str = 'animation';
+const strArry = str.split('');
+
+function tag(accu, curr){
+    console.log(accu, curr);
+    return `${accu}<${curr}>`;
+}
+
+function reduce(arry, callback, defaultValue) {
+    let accu = defaultValue;
+    for(let i = 0; i < arry.length; i++){
+        let curr = arry[i];
+        accu = callback(accu, curr);
+    }
+    return accu;
+}
+
+//const result = strArry.reduce(tag, "");
+const result = reduce(strArry, tag, "");
 console.log(result);
