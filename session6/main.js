@@ -88,7 +88,7 @@ const ageKey = 'age';
 person[ageKey] = 12;
 console.log(person.age);
 person.getFullName();
-*/
+
 
 const arry = [1, 2, 3, 4, 5, 6];
 
@@ -103,4 +103,45 @@ for (let i in arry){
 
 for (let v of arry){
     console.log(v, arry[v]);
+}
+*/
+
+const todos = [
+    {
+        id: 1,
+        title: 'Go to school',
+        completed: true
+    },
+    {
+        id: 2,
+        title: 'Go to museum',
+        completed: true
+    },
+    {
+        id: 3,
+        title: 'Go shopping',
+        completed: false
+    },
+];
+
+for(let i = 0; i < todos.length; i++){
+    let todo = todos[i];
+    //console.log(i, todo.title);
+
+    if(todo.completed === true){
+        console.log(i, todo.title);
+    }
+}
+
+for(let i in todos){
+    let todo = todos[i];
+    if(todo.completed === true){
+        console.log(i, todo.title);
+    }
+}
+
+for(let todo of todos){
+    if(todo.completed === true){
+        console.log(todo, todo.title);
+    }
 }
