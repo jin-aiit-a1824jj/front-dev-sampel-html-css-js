@@ -11,7 +11,13 @@ class TextAnimation {
         }, "");
     }
     animate() {
-        this.el.classList.toggle('inview');
+        console.log(this);
+        const _that = this;
+        window.setTimeout(function() {
+            console.log(this);
+            this.el.classList.toggle('inview');
+            console.log(_that);
+        }.bind(this));
     }
     // log() {
     //     console.log(this.el);
@@ -22,8 +28,7 @@ class TextAnimation {
 //alert(ta.el);
 //ta.log();
 
-const ta = new TextAnimation('.animate-title');
-const ta2 = new TextAnimation('.animate-title-2');
+
 
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -50,16 +55,19 @@ document.addEventListener('DOMContentLoaded', function () {
     }, "");
     */
 
-   setTimeout(()=>{
-    ta.animate();
-    ta2.animate();
-   }, 1000);
+    const ta = new TextAnimation('.animate-title');
+    const ta2 = new TextAnimation('.animate-title-2');
+    setTimeout(()=>{
+        ta.animate();
+        ta2.animate();
+    }, 1000);
  
+    document.querySelector('button').addEventListener('click', ta.animate.bind(ta));
+    document.querySelector('button').addEventListener('click', function(){
+       ta2.animate();
+    });
 });
 
-document.querySelector('button').addEventListener('click', () => {
-    ta.animate();
-    ta2.animate();
-});
+
 
 
