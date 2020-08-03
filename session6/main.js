@@ -1,3 +1,4 @@
+/*
 //alert('hello');
 
 //var, let, const
@@ -18,3 +19,19 @@ console.log(typeof variable);
 
 //静的型付け言語
 //int num = 12;
+
+*/
+function hello(name, age) {
+    console.log('hello' + name + age);
+    return name + age;
+}
+
+hello('code Mafia', 10);
+const returnVal = hello('code Mafia2', 20);
+console.log(returnVal);
+
+const h = function (name, age) {
+    console.log('hello' + name + age);
+    return name + age;
+}
+h('code Mafia3', 30);
