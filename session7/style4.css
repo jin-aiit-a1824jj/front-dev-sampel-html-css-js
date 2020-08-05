@@ -97,17 +97,6 @@ body {
   margin-bottom: 0;
 }
 
-.main-title {
-  font-weight: 600;
-  font-size: 25px;
-}
-
-.sub-title {
-  display: block;
-  font-size: 14px;
-  color: #535353;
-}
-
 .menu-open #container {
   -webkit-transform: translate(-300px, 60px);
           transform: translate(-300px, 60px);
@@ -174,5 +163,16 @@ body {
           transition-delay: 140ms;
   -webkit-transform: translateY(-11px) rotate(-135deg);
           transform: translateY(-11px) rotate(-135deg);
+}
+
+.main-title {
+  font-weight: 600;
+  font-size: 25px;
+}
+
+.sub-title {
+  display: block;
+  font-size: 14px;
+  color: #535353;
 }
 /*# sourceMappingURL=style4.css.map */
