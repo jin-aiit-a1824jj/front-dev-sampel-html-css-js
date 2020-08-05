@@ -8,26 +8,41 @@
     <link rel="stylesheet" href="style6.css">
 </head>
 <body>
-    <!-- Slider main container -->
-<div class="swiper-container">
-    <!-- Additional required wrapper -->
-    <div class="swiper-wrapper">
-        <!-- Slides -->
-        <div class="swiper-slide"><img src="image1.png" alt=""></div>
-        <div class="swiper-slide"><img src="image2.png" alt=""></div>
-        <div class="swiper-slide"><img src="image3.png" alt=""></div>
-        ...
+
+    <div id="global-container">
+        <div id="container">
+            <div class="hero">
+                <div id="hero">
+                    <!-- Slider main container -->
+                    <div class="swiper-container">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                            <!-- Slides -->
+                            <div class="swiper-slide">
+                                <div class="hero__title">Enjoy Rich</div>
+                                <img src="image-1.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="hero__title">Fantastic</div>
+                                <img src="image-2.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="hero__title">Experience</div>
+                                <img src="image-3.jpg" alt="">
+                            </div>
+                            ...
+                        </div>
+                        <div class="hero__footer">
+                            <img class="hero__downarrow" src="arrow.svg">
+                            <span class="hero__scrolltext">scroll</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <!-- If we need pagination -->
-    <div class="swiper-pagination"></div>
 
-    <!-- If we need navigation buttons -->
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-button-next"></div>
-
-    <!-- If we need scrollbar -->
-    <div class="swiper-scrollbar"></div>
-</div>
+    
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="main6.js"></script>
 </body>
