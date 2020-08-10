@@ -30,7 +30,7 @@ Stylesheet: 600px以上のタブレットやモニタで適用
   &__inner {
     padding: 50px;
   }
-  
+
   &__texts,
   &__img {
       flex-basis: 47%;
@@ -39,5 +39,16 @@ Stylesheet: 600px以上のタブレットやモニタで適用
   &__texts {
       display: flex;
       align-items: flex-end;
+  }
+}
+
+.footer {
+  & .logo {
+    justify-content: flex-start;
+  }
+
+  &__li {
+    margin-left: 0;
+    margin-right: 30px;
   }
 }
