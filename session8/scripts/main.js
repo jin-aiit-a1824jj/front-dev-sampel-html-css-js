@@ -33,6 +33,7 @@ document.addEventListener('DOMContentLoaded', function () {
     //const so3 = new ScrollObserver('.nav-trigger', _navAnimation, {once: false});
     
     const main = new Main();
+    //main.destroy();
 });
 
 class Main {
@@ -42,9 +43,22 @@ class Main {
         this._init();
     }
 
+    set observers(val) {
+        this._observers.push(val);
+    }
+
+    get observers(){
+        return this._observers;
+    }
+
     _init() {
         new MobileMenu();
         this.hero = new HeroSlider('.swiper-container');
+        Pace.on('done', this._paceDone.bind(this));
+        //this._scrollInit();
+    }
+
+    _paceDone() {
         this._scrollInit();
     }
 
@@ -79,12 +93,27 @@ class Main {
         }
     }
 
+    _destroyObservers(){
+        this.observers.forEach(ob => {
+            ob.destroy();
+        });
+    }
+
+    destroy() {
+        this._destroyObservers();
+    }
+
     _scrollInit() {
-        this._observers.push(
-            new ScrollObserver('.tween-animate-title', this._textAnimation),
-            new ScrollObserver('.cover-slide', this._inviewAnimation),
-            new ScrollObserver('.nav-trigger', this._navAnimation.bind(this), {once: false}),
-            new ScrollObserver('.swiper-container', this._toggleSlideAnimation.bind(this), {once: false}),
-        );
+        // this._observers.push(
+        //     new ScrollObserver('.tween-animate-title', this._textAnimation),
+        //     new ScrollObserver('.cover-slide', this._inviewAnimation),
+        //     new ScrollObserver('.nav-trigger', this._navAnimation.bind(this), {once: false}),
+        //     new ScrollObserver('.swiper-container', this._toggleSlideAnimation.bind(this), {once: false}),
+        // );
+        this.observers = new ScrollObserver('.tween-animate-title', this._textAnimation);
+        this.observers = new ScrollObserver('.cover-slide', this._inviewAnimation);
+        this.observers = new ScrollObserver('.nav-trigger', this._navAnimation.bind(this), {once: false});
+        this.observers = new ScrollObserver('.swiper-container', this._toggleSlideAnimation.bind(this), {once: false});
+        console.log(this.observers);
     }
 }
