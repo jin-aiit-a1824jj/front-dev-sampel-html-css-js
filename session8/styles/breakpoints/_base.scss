@@ -69,9 +69,9 @@ img {
   color: $cWineRed;
 }
 
-#content {
-  padding-top: $navHeight;
-}
+// #content {
+//   padding-top: $navHeight;
+// }
 
 #main-content {
   position: relative;
@@ -203,6 +203,7 @@ main {
 
 .houses {
   @extend .content-width;
+  @extend .mb-lg;
 
   &__inner {
     @extend .flex;
@@ -259,6 +260,7 @@ main {
   &__btn {
     text-align: center;
     flex-basis: 100%;
+    @extend .mb-lg;
   }
 
   &__img {
